@@ -1,0 +1,159 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4ncxkikayrlp"]
+
+[ext_resource type="Texture2D" uid="uid://iavub3uvp5qb" path="res://assets/PA-EPS-01-0002.png" id="1_vvs4j"]
+[ext_resource type="Texture2D" uid="uid://bu6g4aeryg87g" path="res://assets/Aeropuerto.png" id="2_wmev1"]
+[ext_resource type="Script" path="res://escenas/Chiriqui.gd" id="3_7m2ij"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5hrs1"]
+radius = 19.0263
+
+[node name="Aeropuertos" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(586, 337)
+texture = ExtResource("1_vvs4j")
+metadata/_edit_lock_ = true
+
+[node name="Chiriqui" type="Control" parent="Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -433.0
+offset_top = -38.0
+offset_right = -393.0
+offset_bottom = 2.0
+script = ExtResource("3_7m2ij")
+
+[node name="Button" type="Button" parent="Sprite2D/Chiriqui"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -25.0
+offset_right = 115.0
+offset_bottom = 119.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.395, 0.395)
+action_mode = 0
+icon = ExtResource("2_wmev1")
+
+[node name="Bocas del toro" type="Area2D" parent="Sprite2D"]
+position = Vector2(-452, -140)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Bocas del toro"]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(0.382353, 0.382353)
+texture = ExtResource("2_wmev1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Bocas del toro"]
+visible = false
+shape = SubResource("CircleShape2D_5hrs1")
+
+[node name="Button" type="Button" parent="Sprite2D/Bocas del toro"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -26.0
+offset_right = 115.0
+offset_bottom = 118.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.395, 0.395)
+action_mode = 0
+icon = ExtResource("2_wmev1")
+
+[node name="Panama" type="Area2D" parent="Sprite2D"]
+position = Vector2(115, -130)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Panama"]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(0.382353, 0.382353)
+texture = ExtResource("2_wmev1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Panama"]
+visible = false
+shape = SubResource("CircleShape2D_5hrs1")
+
+[node name="Button" type="Button" parent="Sprite2D/Panama"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0
+offset_top = 135.0
+offset_right = -188.0
+offset_bottom = 279.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.395, 0.395)
+action_mode = 0
+icon = ExtResource("2_wmev1")
+
+[node name="Veraguas" type="Area2D" parent="Sprite2D"]
+position = Vector2(-188, 31)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Veraguas"]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(0.382353, 0.382353)
+texture = ExtResource("2_wmev1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Veraguas"]
+visible = false
+shape = SubResource("CircleShape2D_5hrs1")
+
+[node name="Button" type="Button" parent="Sprite2D/Veraguas"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 570.0
+offset_top = 28.0
+offset_right = 714.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.395, 0.395)
+action_mode = 0
+icon = ExtResource("2_wmev1")
+
+[node name="Darien" type="Area2D" parent="Sprite2D"]
+position = Vector2(410, 84)
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Darien"]
+visible = false
+position = Vector2(0, 3)
+scale = Vector2(0.382353, 0.382353)
+texture = ExtResource("2_wmev1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Darien"]
+visible = false
+shape = SubResource("CircleShape2D_5hrs1")
+
+[node name="Button" type="Button" parent="Sprite2D/Darien"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = -239.0
+offset_right = -179.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.395, 0.395)
+action_mode = 0
+icon = ExtResource("2_wmev1")
+
+[connection signal="pressed" from="Sprite2D/Chiriqui/Button" to="Sprite2D/Chiriqui" method="_on_button_pressed"]
