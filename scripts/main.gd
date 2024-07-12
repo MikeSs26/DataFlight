@@ -8,7 +8,6 @@ extends Node2D
 @onready var panama_button = $panama_button
 @onready var opcion_comprar = $menu_compra/opcion_comprar
 @onready var opcion_salir_menu = $menu_compra/opcion_salir_menu
-
 var menu = null
 
 func _on_bocas_del_toro_button_pressed():
