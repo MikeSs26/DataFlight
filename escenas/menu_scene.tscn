@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://dk6b0w6qiqrw1"]
+
+[ext_resource type="Script" path="res://Scripts/menu_scene.gd" id="1_8u2n0"]
+[ext_resource type="Texture2D" uid="uid://cdvwpjerqa05f" path="res://assets/COMPRAR BOCAS DEL TORO.png" id="1_cvd6w"]
+[ext_resource type="Texture2D" uid="uid://d3mqotrybxsrr" path="res://assets/COMPRAR CHIRIQUI.png" id="2_g7tbt"]
+[ext_resource type="Texture2D" uid="uid://bfpcrrpp31yff" path="res://assets/COMPRAR DARIÉN.png" id="3_3okdi"]
+[ext_resource type="Texture2D" uid="uid://coo0k46n0w1us" path="res://assets/COMPRAR PANAMÁ.png" id="4_j26ja"]
+[ext_resource type="Texture2D" uid="uid://de3rnolm4sin4" path="res://assets/COMPRAR VERAGUAS.png" id="5_vqdc7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qedam"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cvd6w")
+}],
+"loop": true,
+"name": &"bocas del toro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g7tbt")
+}],
+"loop": true,
+"name": &"chiriqui",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3okdi")
+}],
+"loop": true,
+"name": &"darien",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_j26ja")
+}],
+"loop": true,
+"name": &"panama",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vqdc7")
+}],
+"loop": true,
+"name": &"veraguas",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vs66p"]
+size = Vector2(482.133, 169.541)
+
+[node name="MenuScene" type="Node2D"]
+script = ExtResource("1_8u2n0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(455, 255)
+scale = Vector2(0.235931, 0.235931)
+sprite_frames = SubResource("SpriteFrames_qedam")
+animation = &"veraguas"
+
+[node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(262.259, 406.899)
+shape = SubResource("RectangleShape2D_vs66p")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AnimatedSprite2D/Area2D"]
+position = Vector2(-259.61, 406.899)
+shape = SubResource("RectangleShape2D_vs66p")
