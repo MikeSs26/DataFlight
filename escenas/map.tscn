@@ -1,12 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c4ncxkikayrlp"]
+[gd_scene load_steps=6 format=3 uid="uid://c4ncxkikayrlp"]
 
 [ext_resource type="Texture2D" uid="uid://iavub3uvp5qb" path="res://assets/PA-EPS-01-0002.png" id="1_vvs4j"]
 [ext_resource type="Texture2D" uid="uid://bu6g4aeryg87g" path="res://assets/Aeropuerto.png" id="2_wmev1"]
-[ext_resource type="Script" path="res://escenas/Chiriqui.gd" id="3_7m2ij"]
-[ext_resource type="Script" path="res://escenas/Veraguas.gd" id="4_acskr"]
-[ext_resource type="Script" path="res://escenas/Darien.gd" id="5_m6365"]
-[ext_resource type="Script" path="res://escenas/Panama.gd" id="6_8uln7"]
-[ext_resource type="Script" path="res://escenas/Bocas del toro.gd" id="7_apa8j"]
+[ext_resource type="Script" path="res://escenas/Rutas.gd" id="4_gxsaa"]
+[ext_resource type="Script" path="res://escenas/Airport.gd" id="7_apa8j"]
 [ext_resource type="PackedScene" uid="uid://hal1y4r0l2bn" path="res://escenas/menu_compra.tscn" id="8_i7q8l"]
 
 [node name="Aeropuertos" type="Node2D"]
@@ -17,6 +14,7 @@ texture = ExtResource("1_vvs4j")
 metadata/_edit_lock_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+metadata/_edit_lock_ = true
 
 [node name="Chiriqui" type="Control" parent="."]
 layout_mode = 3
@@ -25,7 +23,8 @@ offset_left = 153.0
 offset_top = 299.0
 offset_right = 193.0
 offset_bottom = 339.0
-script = ExtResource("3_7m2ij")
+script = ExtResource("7_apa8j")
+metadata/airport_id = "Chiriqui"
 
 [node name="Button" type="Button" parent="Chiriqui"]
 layout_mode = 1
@@ -45,6 +44,10 @@ theme_type_variation = &"FlatButton"
 action_mode = 0
 icon = ExtResource("2_wmev1")
 
+[node name="Node2D" type="Node2D" parent="Chiriqui"]
+position = Vector2(20, 20)
+script = ExtResource("4_gxsaa")
+
 [node name="Veraguas" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -52,7 +55,8 @@ offset_left = 378.0
 offset_top = 353.0
 offset_right = 418.0
 offset_bottom = 393.0
-script = ExtResource("4_acskr")
+script = ExtResource("7_apa8j")
+metadata/airport_id = "Veraguas"
 
 [node name="Button" type="Button" parent="Veraguas"]
 layout_mode = 1
@@ -72,6 +76,10 @@ theme_type_variation = &"FlatButton"
 action_mode = 0
 icon = ExtResource("2_wmev1")
 
+[node name="Node2D" type="Node2D" parent="Veraguas"]
+position = Vector2(22, 19)
+script = ExtResource("4_gxsaa")
+
 [node name="Darien" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -79,7 +87,8 @@ offset_left = 975.0
 offset_top = 401.0
 offset_right = 1015.0
 offset_bottom = 441.0
-script = ExtResource("5_m6365")
+script = ExtResource("7_apa8j")
+metadata/airport_id = "Darien"
 
 [node name="Button" type="Button" parent="Darien"]
 layout_mode = 1
@@ -99,6 +108,10 @@ theme_type_variation = &"FlatButton"
 action_mode = 0
 icon = ExtResource("2_wmev1")
 
+[node name="Node2D" type="Node2D" parent="Darien"]
+position = Vector2(18, 22)
+script = ExtResource("4_gxsaa")
+
 [node name="Panama" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -106,7 +119,8 @@ offset_left = 681.0
 offset_top = 189.0
 offset_right = 721.0
 offset_bottom = 229.0
-script = ExtResource("6_8uln7")
+script = ExtResource("7_apa8j")
+metadata/airport_id = "Panama"
 
 [node name="Button" type="Button" parent="Panama"]
 layout_mode = 1
@@ -126,6 +140,10 @@ theme_type_variation = &"FlatButton"
 action_mode = 0
 icon = ExtResource("2_wmev1")
 
+[node name="Node2D" type="Node2D" parent="Panama"]
+position = Vector2(18, 21)
+script = ExtResource("4_gxsaa")
+
 [node name="Bocas del toro" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -134,6 +152,7 @@ offset_top = 176.0
 offset_right = 154.0
 offset_bottom = 216.0
 script = ExtResource("7_apa8j")
+metadata/airport_id = "Bocas"
 
 [node name="Button" type="Button" parent="Bocas del toro"]
 layout_mode = 1
@@ -152,6 +171,10 @@ scale = Vector2(0.395, 0.395)
 theme_type_variation = &"FlatButton"
 action_mode = 0
 icon = ExtResource("2_wmev1")
+
+[node name="Node2D" type="Node2D" parent="Bocas del toro"]
+position = Vector2(18, 20)
+script = ExtResource("4_gxsaa")
 
 [node name="AnimatedSprite2D" parent="." instance=ExtResource("8_i7q8l")]
 unique_name_in_owner = true
