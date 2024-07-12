@@ -60,7 +60,8 @@ script = ExtResource("1_8u2n0")
 position = Vector2(455, 255)
 scale = Vector2(0.235931, 0.235931)
 sprite_frames = SubResource("SpriteFrames_qedam")
-animation = &"veraguas"
+animation = &"chiriqui"
+autoplay = "chiriqui"
 
 [node name="Area2D" type="Area2D" parent="AnimatedSprite2D"]
 

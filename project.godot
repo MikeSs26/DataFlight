@@ -14,6 +14,10 @@ config/name="Data Flight"
 run/main_scene="res://escenas/map.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[display]
+
+window/size/mode=2
+
 [dotnet]
 
 project/assembly_name="Data Flight"
@@ -23,3 +27,4 @@ project/assembly_name="Data Flight"
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
