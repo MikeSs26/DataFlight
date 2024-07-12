@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu6g4aeryg87g"
-path="res://.godot/imported/Aeropuerto.png-64da13de1cd765c71201c338c1107617.ctex"
+uid="uid://iavub3uvp5qb"
+path="res://.godot/imported/PA-EPS-01-0002.png-04dbeb0ca9d56e81ebd01232f4c4228e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aeropuerto.png"
-dest_files=["res://.godot/imported/Aeropuerto.png-64da13de1cd765c71201c338c1107617.ctex"]
+source_file="res://assets/PA-EPS-01-0002.png"
+dest_files=["res://.godot/imported/PA-EPS-01-0002.png-04dbeb0ca9d56e81ebd01232f4c4228e.ctex"]
 
 [params]
 

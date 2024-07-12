@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4ncxkikayrlp"]
 
-[ext_resource type="Texture2D" uid="uid://iavub3uvp5qb" path="res://PA-EPS-01-0002.png" id="1_nukyg"]
-[ext_resource type="Texture2D" uid="uid://bu6g4aeryg87g" path="res://Aeropuerto.png" id="2_jve0t"]
+[ext_resource type="Texture2D" uid="uid://iavub3uvp5qb" path="res://assets/PA-EPS-01-0002.png" id="1_vvs4j"]
+[ext_resource type="Texture2D" uid="uid://bu6g4aeryg87g" path="res://assets/Aeropuerto.png" id="2_wmev1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5hrs1"]
 radius = 19.0263
 
 [node name="Sprite2D" type="Sprite2D"]
 position = Vector2(593, 336)
-texture = ExtResource("1_nukyg")
+texture = ExtResource("1_vvs4j")
 metadata/_edit_lock_ = true
 
 [node name="Chiriqui" type="Area2D" parent="."]
@@ -20,7 +20,7 @@ shape = SubResource("CircleShape2D_5hrs1")
 [node name="Sprite2D" type="Sprite2D" parent="Chiriqui"]
 position = Vector2(0, 3)
 scale = Vector2(0.382353, 0.382353)
-texture = ExtResource("2_jve0t")
+texture = ExtResource("2_wmev1")
 
 [node name="Bocas del toro" type="Area2D" parent="."]
 position = Vector2(-452, -140)
@@ -31,7 +31,7 @@ shape = SubResource("CircleShape2D_5hrs1")
 [node name="Sprite2D" type="Sprite2D" parent="Bocas del toro"]
 position = Vector2(0, 3)
 scale = Vector2(0.382353, 0.382353)
-texture = ExtResource("2_jve0t")
+texture = ExtResource("2_wmev1")
 
 [node name="Panama" type="Area2D" parent="."]
 position = Vector2(115, -130)
@@ -42,7 +42,7 @@ shape = SubResource("CircleShape2D_5hrs1")
 [node name="Sprite2D" type="Sprite2D" parent="Panama"]
 position = Vector2(0, 3)
 scale = Vector2(0.382353, 0.382353)
-texture = ExtResource("2_jve0t")
+texture = ExtResource("2_wmev1")
 
 [node name="Veraguas" type="Area2D" parent="."]
 position = Vector2(-188, 31)
@@ -53,7 +53,7 @@ shape = SubResource("CircleShape2D_5hrs1")
 [node name="Sprite2D" type="Sprite2D" parent="Veraguas"]
 position = Vector2(0, 3)
 scale = Vector2(0.382353, 0.382353)
-texture = ExtResource("2_jve0t")
+texture = ExtResource("2_wmev1")
 
 [node name="Darien" type="Area2D" parent="."]
 position = Vector2(410, 84)
@@ -64,4 +64,4 @@ shape = SubResource("CircleShape2D_5hrs1")
 [node name="Sprite2D" type="Sprite2D" parent="Darien"]
 position = Vector2(0, 3)
 scale = Vector2(0.382353, 0.382353)
-texture = ExtResource("2_jve0t")
+texture = ExtResource("2_wmev1")
